@@ -1,44 +1,200 @@
 ---
-layout: default
+layout: post
+title: Algoritando
+comments: false
 ---
 
-{% for post in paginator.posts %}
-	{% include excerpt.html post=post %}
-{% endfor %}
+<h2>Definição de Algoritmos</h2>
 
-<div class="panel panel-default">
-	<div class="panel-body">
-		<div class="text-center">{{ site.data[page.lang].page }}:
-		{{ paginator.page }} {{ site.data[page.lang].of }}
-		{{ paginator.total_pages }}</div>
-		{% if paginator.next_page or paginator.previous_page %}
-		<ul class="pager">
-			{% if paginator.previous_page %}
-				{% if paginator.previous_page == 1 %}
-					<li class="previous">
-						<a href="{{ site.baseurl }}/index.html">
-							<i class="icon-previous"></i>
-							{{ site.data[page.lang].newerPost }}
-						</a>
-					</li>
-				{% else %}
-					<li class="previous">
-						<a href="{{ site.baseurl }}/page{{ paginator.previous_page }}">
-							<i class="icon-previous"></i>
-							{{ site.data[page.lang].newerPost }}
-						</a>
-					</li>
-				{% endif %}
-			{% endif %}
-			{% if paginator.next_page %}
-				<li class="next">
-					<a href="{{ site.baseurl }}/page{{ paginator.next_page }}">
-						{{ site.data[page.lang].olderPost }}
-						<i class="icon-next"></i>
-					</a>
-				</li>
-			{% endif %}
-		</ul>
-		{% endif %}
-	</div>
-</div>
+<p>Algoritmos criado pelo matemático iraniano <em>Abu Abdullah Muhammad Ibn
+Musa al-Khwarizmi</em>, também considerado o fundador da álgebra. Os
+algoritmos são procedimentos que se executados passo a passo conseguem
+resolver problemas, ou realizar uma determinada tarefa. Lembrando que os
+algoritmos não são a solução para os problemas e sim uma sequência de
+comandos com um passo a passo detalhado para chegar a uma solução.</p>
+
+<p>Um algoritmo é como uma receita para fazer um bolo, vejamos:</p>
+
+<h3>Igredientes</h3>
+
+<ul>
+	<li>2 xícaras (chá) de açúcar</li>
+	<li>3 xícaras (chá) de farinha de trigo</li>
+	<li>4 colheres (sopa) de margarina</li>
+	<li>3 ovos</li>
+	<li>1 e 1/2 xícara (chá) de leite</li>
+	<li>1 colher (sopa) bem cheia de fermento em pó</li>
+</ul>
+
+<h3>Modo de preparo</h3>
+
+<ol type="1">
+	<li>Bata as claras em neve e reserve</li>
+	<li>Misture as gemas, a margarina e o açúcar até obter uma massa
+		homogênea</li>
+	<li>Acrescente o leite e a farinha de trigo aos poucos, sem parar
+		de bater</li>
+	<li>Por último, adicione as claras em neve e o fermento</li>
+	<li>Despeje a massa em uma forma grande de furo central untada e
+		enfarinhada</li>
+	<li>Asse em forno médio 180 °C, preaquecido, por aproximadamente 40
+		minutos ou ao furar o bolo com um garfo, se sair limpo o bolo
+		estará no ponto.</li>
+</ol>
+
+<p>Após realizar todos os procedimentos para preparar o bolo, você obterá
+o seguinte resultado:</p>
+
+<img alt="Bolo" class="img-responsive center-block"
+	src="{{ site.baseurl }}/images/bolo.jpg">
+
+<p>Fácil, não é? Agora que temos uma noção sobre algoritmos vamos à prática.</p>
+
+<h2>Software Visualg</h2>
+
+<p>Nesse tutorial usaremos um software que copila algoritmos, o
+<strong>Visualg</strong>. Você poderá fazer o download gratuito
+<b><a href="http://www.dicasdeprogramacao.com.br/download-visualg/">clicando
+aqui</a></b>. Uma observação importante do Visualg é que ele é portátil e não
+necessita de instalação, por isso você poderá executar diretamente de um
+pendrive. Veja na ilustração como é a tela principal do Visualg.</p>
+
+<img alt="Bolo" class="img-responsive center-block"
+	src="{{ site.baseurl }}/images/visualg.png">
+
+
+<p>Legal não é? Agora que temos o programa em mãos, então vamos aos primeiros
+passos. Antes de dar início aos procedimentos vamos entender melhor quais as
+principais sintaxes e como elas funcionam:</p>
+
+<dl class="dl-horizontal">
+	<dt>Algoritmo " "</dt>
+	<dd>Aqui você colocará entre aspas o nome do seu algoritmo, atente-se para
+		não começar com caracteres especiais e não usar espaços para separar
+		palavras e nem acentos, pois poderá ocorrer erros ao copilar.
+<pre>
+Algoritmo "Exercício 1"  // ERRADO
+Algoritmo "Exercicio_1"  // CERTO
+</pre>
+	</dd>
+	<dt>Var</dt>
+	<dd>Aqui você vai colocar as variáveis. Variáveis são espaços reservados
+		na memória para armazenar valores, os valores mais usados são
+		<strong>inteiro</strong>, <strong>real</strong>,
+		<strong>caracter</strong>.<br/>
+		Quando dizemos ao computador que uma
+		variável é do tipo inteiro, essa variável só receberá números
+		inteiros caso contrário dará erro ao copilar. Exemplo:
+<pre>
+Var nota1, nota2, media: inteiro
+</pre>
+		Quando dizemos ao computador que uma variável é do tipo real, essa
+		variável poderá receber tanto números inteiros quanto números reais.
+		Exemplo:
+<pre>
+Var kilo, valor, total: real
+</pre>
+		Quando dizemos ao computador que uma variável é do tipo caracter,
+		essa variável só poderá receber palavras. Exemplo:
+<pre>
+Var nome, sobrenome: caractere
+</pre>
+	</dd>
+	<dt>Inicio</dt>
+	<dd>A partir daqui entra a sequência de procedimentos. Para o programa
+	compilar corretamente é importante ressaltar que deve-se definir as
+	variáveis no topo do programa. Exemplo logo abaixo.</dd>
+	<dt>Fimalgoritmo</dt>
+	<dd>Aqui finalizamos nosso algoritmo.</dd>
+	<dt></dt>
+	<dd></dd>
+</dl>
+
+<pre>
+Algoritmo "Informa_nome"
+Var nome: caractere
+Inicio
+	escreval ("Informe seu nome")
+	leia(nome)
+	escreval ("O nome informado foi ", nome)
+Fimalgoritmo
+</pre>
+
+<p>Repare que no topo do programa utilizamos a variável <code>nome</code> e
+no corpo do programa usamos o comando <code>leia</code> para que o computador
+possa ler a informação que será digitada no teclado. Note também que para
+ficar mais agradável usamos o comando <code>escreval</code> para aparecer
+na tela a informação que o usuário inseriu.</p>
+
+<p><strong>IMPORTANTE</strong>: Toda vez que você quiser que o computador
+leia uma informação que será digitada use o comando
+<code>leia(aqui você informará ao computador a variável a ser lida)</code>,
+e sempre que quiser que apareça algo na tela do computador use o comando
+<code>escreval("Tudo que ficar entre aspas aparecerá na tela!")</code>.
+
+<p>Vamos colocar nosso conhecimento em prática? Então faça um algoritmo que
+leia duas notas de um aluno e informe a média. Primeiramente vamos dar um
+nome ao nosso algoritmo, que tal <code>"Media_aluno"</code>.</p>
+
+<pre>
+Algoritmo “Media_aluno”
+Var nota1, nota2, media: real
+</pre>
+
+<p>Até aqui tudo bem, não é? Definimos a primeira nota com a variável
+<code>nota1</code>, e a segunda como <code>nota2</code> e a <code>media</code>
+para calcularmos a média, então faremos:</p>
+
+<pre>
+Inicio
+	escreval (“Informe a 1ª nota”)
+	leia (nota1)
+	escreval (“Informe a 2ª nota”)
+	leia (nota2)
+	media <- (nota1+nota2)/2
+</pre>
+
+<p>Talvez surgiu-lhe uma dúvida agora nessa variável <code>media</code>,
+deixa eu te explicar, o sinal de <strong>&lt;</strong> (menor) junto com o
+sinal <strong>-</strong> (traço), forma <strong>&lt;-</strong> que significa
+"recebe", ou seja, a variável <code>media</code> &lt;- o cálculo nota1 + nota2
+dividido por dois.
+
+<p>A divisão é referente a quantidade das notas, ou seja, se tivéssemos três
+notas o cálculo seria nota1 + nota2 + nota3 dividido por 3, entendeu?</p>
+
+<p>Agora que compreendemos como fazer o cálculo da média, vamos fazer com que
+o resultado apareça na tela do computador?</p>
+
+<pre>
+	escreval ("A média do aluno é ", media)
+</pre>
+
+<p>Antes de terminarmos note que no último comando <code>escreval</code>
+informamos entre parênteses e entre aspas o que deve aparecer na tela, e no
+final das aspas ouve uma separação com vírgula e inserimos a variável
+<code>media</code>, para que o computador mostre o resultado do cálculo. Toda
+vez que for usar uma variável dentro do <code>escreval</code> é necessário
+separá-la por vírgula. Prático não?</p>
+
+<pre>
+Fimalgoritmo
+</pre>
+
+<p>Aqui finaliza o nosso algoritmo e também o nosso tutorial, esperamos que
+tenhamos ajudado e que tenham gostado de nosso tutorial Algoritando. Só para
+relembrar, vamos listar o algoritmo <code>"Media_aluno"</code> completo
+abaixo:</p>
+
+<pre>
+Algoritmo “Media_aluno”
+Var nota1, nota2, media: real
+Inicio
+	escreval (“Informe a 1ª nota”)
+	leia (nota1)
+	escreval (“Informe a 2ª nota”)
+	leia (nota2)
+	media <- (nota1+nota2)/2
+	escreval ("A média do aluno é ", media)
+Fimalgoritmo
+</pre>
