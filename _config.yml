@@ -14,7 +14,7 @@ github: 'algoritando/algoritando.github.io'
 gaaccount: 'UA-56084241-1'
 
 # Set this to your disqus shortname to enable comments.
-disqus: 'br-lemes'
+disqus: ''
 
 permalink: /:year/:month/:title/
 paginate: 5
